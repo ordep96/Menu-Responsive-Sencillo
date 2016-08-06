@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no">
+     <title>Prueba de Navegación</title>
+     <link rel="stylesheet" href="style.css">
+<style>
+*{margin:0;padding:0;}
+
+.menu-bar{
+ display:none;
+}
+
+
+.menu{
+ background:#303f9f;
+ list-style:none;
+}
+
+.menu li{
+ display:inline-block;
+ position:relative;
+}
+
+.menu li a{
+  color:#fff;
+  text-decoration:none;
+  font-family:Helvetica;
+  display:block;
+  padding:20px;
+}
+
+.menu li a span{
+ position:relative;
+ right:10px;
+ top:1.2px;
+ color: #607d8b;
+}
+
+.menu li a:hover{
+ box-shadow:0px -5px #c62828 inset;
+}
+
+@media screen and (max-width:800px){
+  .menu-bar{
+     display:block;
+     width:100%;
+     background:#ccc;
+  }
+
+  .menu-bar .bt-menu{
+   display:block;
+   color:#fff; 
+   font-family:Helvetica;
+   padding:20px;
+   font-size:22px;
+   background:#c62828;
+}
+
+.menu-bar .bt-menu span{
+ float:right;
+ font-size:20px;
+ position:relative;
+ top:4px;
+}
+
+.menu{display:none;}
+
+.menu li{
+ display:block;
+ border-bottom:0.80px solid #ccc;
+}
+
+.menu li a:hover{box-shadow:none;}
+
+}
+
+
+</style>
+</head>
+<body>
+<div class="menu-bar">
+ <a class="bt-menu"><span id="icono" class="icon-menu"></span>Menu</a>
+</div>
+<ul class="menu">
+    <li><a href="#"><span class="icon-home"></span>Inicio</a></li>
+    <li><a href="#"><span class="icon-book"></span>Categorias</a></li>
+    <li><a href="#"><span class="icon-services"></span>Servicios</a></li>
+    <li><a href="#"><span class="icon-rocket"></span>Proyectos</a></li>
+    <li><a href="#"><span class="icon-mail"></span>Contacto</a></li>
+</ul>
+<script src="jquery.js"></script>
+<script>
+$(".menu-bar").click(function(){
+  $(this).next().slideToggle();
+});
+</script>
+</body>
+</html>
